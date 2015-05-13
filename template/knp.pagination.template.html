@@ -1,0 +1,22 @@
+<ul class="pagination ng-hide" ng-show="!isEmpty(pagedata)">
+    <li class="first" ng-class="{ disabled: pagedata.current==pagedata.first }" ng-disabled="pagedata.current == pagedata.first">
+        <a href="{{ pagedata.path }}{{ pagedata.first }}" ng-show="pagedata.first != pagedata.current">&laquo;</a>
+        <span ng-show="pagedata.first == pagedata.current">&laquo;</span>
+    </li>
+    <li class="prev" ng-class="{ disabled: !pagedata.prev }" ng-disabled="!pagedata.prev">
+        <a href="{{ pagedata.path }}{{ pagedata.prev }}" ng-show="pagedata.prev">&lsaquo;</a>
+        <span ng-show="!pagedata.prev">&lsaquo;</span>
+    </li>
+    <li ng-repeat="p in pagedata.pagesInRange" ng-class="{active: p == pagedata.current}">
+        <a href="{{ pagedata.path }}{{ p }}" ng-show="p != pagedata.current">{{ p }}</a>
+        <span ng-show="p == pagedata.current">{{ p }}</span>
+    </li>
+    <li class="next" ng-class="{ disabled: !pagedata.next }" ng-disabled="!pagedata.next">
+        <a href="{{ pagedata.path }}{{ pagedata.next }}" ng-show="pagedata.next">&rsaquo;</a>
+        <span ng-show="!pagedata.next">&rsaquo;</span>
+    </li>
+    <li class="last" ng-class="{ disabled: pagedata.current==pagedata.last}" ng-disabled="pagedata.last == pagedata.current">
+        <a href="{{ pagedata.path }}{{ pagedata.last }}" ng-show="pagedata.last != pagedata.current">&raquo;</a>
+        <span ng-show="pagedata.last == pagedata.current">&raquo;</span>
+    </li>
+</ul>
