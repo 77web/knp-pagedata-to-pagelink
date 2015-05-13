@@ -1,0 +1,25 @@
+{
+  "name": "knp-pagedata-to-pagelink",
+  "version": "0.0.1",
+  "authors": [
+    "77web<info@77-web.com>"
+  ],
+  "description": "angularjs directive to show pagination link from KnpPaginatorBundle pagination data in json-format",
+  "main": "knp-pagelink.js",
+  "keywords": [
+    "angularjs",
+    "paginator",
+    "knp"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.15"
+  }
+}
